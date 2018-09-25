@@ -1,2 +1,3 @@
-# serverless
-Serverless portfolio
+# Alex Paun's portfolio
+
+This is my professional portfolio. It uses AWS and ReactJS.
