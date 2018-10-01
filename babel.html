@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Babel Demo</title>
+  </head>
+  <body>
+    <main>
+      <label>Name: <input id="name" type="text"/></label>
+      <button id="submit_info">Click me!</button>
+      <div id="content"></div>
+    </main>
+
+    <script> src="https://unpkg.com/babel-standalone"
+
+    </script>
+
+    <script type="text/babel" data-presets="latest">
+
+    const getMessage = (name) => `Welcome to Javascript, ${name}!`;
+    const button = document.getElementById('submit_info');
+
+    button.addEventListner('click', (evt) => {
+      let name = document.getElementById("name").value;
+
+      if (name.lenght < 2) {
+        alert("You need to enter a name!");
+      }
+      else {
+        document.getElementById('content').textContent = getMessage(name);
+      }
+    });
+
+    </script>
+  </body>
+</html>
